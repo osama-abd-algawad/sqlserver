@@ -1,0 +1,20 @@
+{
+    "$schema": "https://railway.app/railway.schema.json",
+    "services": {
+      "db": {
+        "build": {
+          "dockerfile": "Dockerfile",
+          "builder": "DOCKERFILE"
+        },
+        "deploy": {
+          "restartPolicy": "always",
+          "healthcheckPath": "/health" 
+        },
+        "environment": {
+          "ACCEPT_EULA": "Y",
+          "SA_PASSWORD": "odnc@#0f9df#@!@",
+          "MSSQL_PID": "Express"
+        }
+      }
+    }
+  }
